@@ -1,0 +1,38 @@
+.add-options form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+.add-options form input {
+  width: 40vh;
+  height: 4vh;
+  padding: 1vh;
+}
+
+.btn-add {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 2vh;
+  background-color: #0dbc9e;
+  border-radius: 5px;
+  width: 30%;
+  height: 5.1vh;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2.1vh;
+  color: #fff;
+  transition: 1s ease;
+}
+
+.btn-add:hover {
+  animation: change-color 2.5s ease infinite alternate;
+}
+
+.btn-add:active {
+  animation: bounce 0.1s ease-in;
+}

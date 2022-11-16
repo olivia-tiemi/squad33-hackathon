@@ -1,0 +1,41 @@
+.edit-row {
+  border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+}
+
+.edit-row input {
+  margin-right: 2vh;
+  padding: 0.7vh;
+}
+
+.save-cancel {
+  display: flex;
+  padding: 1vh;
+  gap: 2vh;
+}
+
+.salvar {
+  background-image: url("/src/assets/done-button.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3vh;
+  width: 3vh;
+  background-color: white;
+  border: white;
+  cursor: pointer;
+}
+.salvar:hover {
+  background-color: rgba(23, 226, 23, 0.5);
+}
+.cancelar {
+  background-image: url("/src/assets/close-button.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3vh;
+  width: 3vh;
+  background-color: white;
+  border: white;
+  cursor: pointer;
+}
+.cancelar:hover {
+  background-color: rgb(255, 0, 0, 0.5);
+}

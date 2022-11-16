@@ -1,0 +1,76 @@
+.topicos {
+  height: 100%;
+}
+
+.topicos ul {
+  padding: 2vh;
+  list-style: none;
+}
+.topicos ul > li {
+  font-size: 2.5vh;
+}
+
+#label-subtopicos {
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+#label-subtopicos input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4vh;
+  width: 4vh;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+#label-subtopicos:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+#label-subtopicos input:checked ~ .checkmark {
+  background-color: #ee41a8;
+}
+
+#label-subtopicos .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 1.2vh;
+  top: 0.7vh;
+  width: 1vh;
+  height: 1.7vh;
+  border: solid white;
+  border-width: 0 0.4vh 0.4vh 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#label-subtopicos input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.texto-aula {
+  display: flex;
+  margin-left: 5vh;
+}
+
+.nome-aula {
+  cursor: pointer;
+  padding: 2vh 1vh;
+}
+
+.aula-atual {
+  background-color: rgba(238, 65, 168, 0.3);
+}

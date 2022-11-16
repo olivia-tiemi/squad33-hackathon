@@ -1,0 +1,65 @@
+$theme-color-1: #0dbc9e;
+$theme-color-2: #ee41a8;
+$theme-color-3: #9026d0;
+
+@mixin display_flex($flex_direction, $justify_content, $align_items) {
+  display: flex;
+  flex-direction: $flex_direction;
+  justify-content: $justify_content;
+  align-items: $align_items;
+}
+
+.main-container {
+  @include display_flex(column, center, center);
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/background-dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.call-to-action {
+  @include display_flex(column, center, center);
+  position: absolute;
+  top: 5vh;
+
+  .main-logo {
+    width: 30vh;
+  }
+
+  .btn-inicio {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    background-color: $theme-color-1;
+    margin-top: 3vh;
+    margin-bottom: 1.5vh;
+    text-align: center;
+    width: 40vh;
+    height: 7vh;
+    border-radius: 5px;
+    font-size: 3vh;
+    transition: 1s ease;
+
+    &:hover {
+      animation: change-color 2.5s ease infinite alternate;
+    }
+
+    &:active {
+      animation: bounce 0.1s ease-in;
+    }
+  }
+
+  p {
+    font-size: 2vh;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}

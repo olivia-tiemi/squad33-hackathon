@@ -1,0 +1,34 @@
+@mixin display_flex($flex_direction, $justify_content, $align_items) {
+  display: flex;
+  flex-direction: $flex_direction;
+  justify-content: $justify_content;
+  align-items: $align_items;
+}
+
+.trilhas {
+  @include display_flex(row, center, center);
+  width: 100%;
+  font-size: 1.25rem;
+  position: absolute;
+  bottom: 10vh;
+  gap: 3vw;
+
+  .card-collection {
+    @include display_flex(row, center, center);
+    gap: 10vw;
+  }
+
+  img {
+    width: 3vh;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+
+    &:active {
+      animation: bounce 0.1s ease-in;
+    }
+  }
+}

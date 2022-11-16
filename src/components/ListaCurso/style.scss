@@ -1,0 +1,70 @@
+.lista-curso {
+  display: flex;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+
+  .wrap-description {
+    width: 50vw;
+    z-index: 2;
+    gap: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+    .trilha {
+      justify-content: center;
+      font-size: 2vh;
+      border-radius: 20px;
+      background-image: linear-gradient(white, white),
+        radial-gradient(circle at top left, #0dbc9e, #ee41a8, #9026d0);
+      background-clip: content-box, border-box;
+      img {
+        filter: brightness(0.4);
+      }
+    }
+    .description {
+      text-align: center;
+      padding: 5vh;
+    }
+  }
+  .wrapper {
+    padding: 5vh;
+    width: 45vw;
+    margin-top: 25vh;
+    overflow: auto;
+  }
+}
+
+.close {
+  cursor: pointer;
+  font-size: 2.5vh;
+  z-index: 2;
+  position: absolute;
+  top: 15vh;
+  right: 15vh;
+}
+
+.wrapper {
+  scrollbar-width: auto;
+  scrollbar-color: #fff white;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #8b8b8b;
+  border-radius: 8px;
+  border: 3px solid #fff;
+}

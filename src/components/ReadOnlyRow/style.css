@@ -1,0 +1,41 @@
+.linha {
+  border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+}
+
+tr.linha > td {
+  padding: 1vh;
+}
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  gap: 2vh;
+}
+
+.button-editar {
+  background-image: url("/src/assets/edit-button.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3vh;
+  width: 3vh;
+  background-color: white;
+  border: white;
+  cursor: pointer;
+}
+.button-editar:hover {
+  filter: opacity(50%);
+}
+.button-deletar {
+  background-image: url("/src/assets/delete-button.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3vh;
+  width: 3vh;
+  background-color: white;
+  border: white;
+  cursor: pointer;
+  margin-top: 0.5vh;
+}
+.button-deletar:hover {
+  filter: opacity(50%);
+}

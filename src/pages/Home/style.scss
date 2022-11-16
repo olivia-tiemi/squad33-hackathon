@@ -1,0 +1,80 @@
+$theme-color-1: #0dbc9e;
+$theme-color-2: #ee41a8;
+$theme-color-3: #9026d0;
+
+@mixin display_flex($flex_direction, $justify_content, $align_items) {
+  display: flex;
+  flex-direction: $flex_direction;
+  justify-content: $justify_content;
+  align-items: $align_items;
+}
+
+.page-home {
+  @include display_flex(column, center, center);
+  background-image: url("../../assets/background-light.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  gap: 5vh;
+
+  .escolher-trilha {
+    font-size: 7vh;
+  }
+
+  .trilhas {
+    position: static;
+    cursor: pointer;
+
+    .seta {
+      filter: brightness(0);
+    }
+
+    .card-collection {
+      gap: 5vh;
+      img {
+        filter: brightness(0.4);
+      }
+    }
+
+    .trilha {
+      border: 7px solid $theme-color-1;
+      border-radius: 20px;
+      background-color: #fff;
+      font-size: 2vh;
+
+      &:hover {
+        transform: scale(1.07);
+        transition: all 0.5s ease;
+      }
+
+      &:active {
+        animation: bounce 0.1s ease-out;
+      }
+
+      &:first-child {
+        border: 7px solid $theme-color-3;
+      }
+
+      &:last-child:not(:first-child) {
+        border: 7px solid $theme-color-2;
+      }
+
+      img {
+        &:hover {
+          transform: scale(1);
+        }
+
+        &:active {
+          animation: none;
+        }
+      }
+    }
+  }
+}
+
+.lista-curso {
+  z-index: 1;
+  position: fixed;
+}

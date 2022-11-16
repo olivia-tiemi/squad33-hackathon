@@ -1,0 +1,51 @@
+.header-pages {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px #d9d9d9;
+  padding: 2vh;
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  h1 {
+    display: flex;
+    align-self: center;
+    font-size: 3vh;
+  }
+  .left-side {
+    display: flex;
+    flex-grow: 2;
+    gap: 2vh;
+  }
+
+  .right-side {
+    display: flex;
+    text-align: end;
+    gap: 2vh;
+    h1 {
+      font-size: 2.5vh;
+    }
+
+    img {
+      align-self: center;
+      justify-self: center;
+      width: 3.5vh;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:active {
+        animation: bounce 0.1s ease-in;
+      }
+    }
+  }
+}

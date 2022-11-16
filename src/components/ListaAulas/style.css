@@ -1,0 +1,82 @@
+.aulas {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2vh;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 30%;
+}
+
+.go-back {
+  display: flex;
+  font-size: 2vh;
+  padding: 2vh;
+  text-decoration: none;
+  color: #ee41a8;
+  font-weight: 700;
+}
+
+.go-back:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.aulas nav ul li {
+  position: relative;
+  display: inline-block;
+  width: 30vh;
+  background-color: #fff;
+}
+
+.aula-selecionada {
+  cursor: default;
+}
+
+.aula-selecionada:after {
+  margin-left: 2vh;
+  content: "▼";
+  font-size: 2vh;
+}
+
+.aulas nav ul li a {
+  padding: 1vh 2vh;
+  margin-bottom: 1vh;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.aulas nav ul li a:hover {
+  opacity: 0.5;
+  background-color: gray;
+  color: white;
+  width: 100%;
+}
+.aulas nav ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 3;
+}
+
+.aulas nav ul li:hover ul {
+  display: block;
+}
+
+div.aulas::-webkit-scrollbar-track {
+  border-radius: 0 20px 20px 0;
+  background-color: white;
+}
+div.aulas::-webkit-scrollbar {
+  width: 6px;
+}
+div.aulas::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+div.aulas > nav > ul > li > a {
+  font-size: 3vh;
+  font-weight: 700;
+}
